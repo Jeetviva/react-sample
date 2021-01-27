@@ -4,7 +4,7 @@ This is a react app setup to be run easily with a Gitlab pipeline and be deploye
 
 It is to be used with this tutorial - https://dev.to/jtorbett23/react-gitlab-pages-42l6
 
-Gitlab repository - https://gitlab.com/jtorbett23/gitlab-pages-react-example
+Gitlab repository - https://gitlab.com/jtorbett23/gitlab-pages-react-example/
 Gitlab pages url - https://jtorbett23.gitlab.io/gitlab-pages-react-example/
 
 ## Available Scripts
@@ -41,4 +41,4 @@ Once your first pipeline has finished running go to Settings > Pages to find the
 
 If you only see a whitescreen make sure to edit the "homepage" attribute in the `package.json` to match your url.
 
-For example my url is "https://jtorbett23.gitlab.io/gitlab-pages-react-example/" so my homepage will need to be "gitlab-pages-react-example".
+For example my url is "https://jtorbett23.gitlab.io/gitlab-pages-react-example/", so my homepage will need to be "gitlab-pages-react-example".
