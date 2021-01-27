@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Gitlab Pages React Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react app setup to be run easily with a Gitlab pipeline and be deployed to Gitlab pages.
+
+It is to be used with this tutorial - https://dev.to/jtorbett23/react-gitlab-pages-42l6
+
+Gitlab repository - https://gitlab.com/jtorbett23/gitlab-pages-react-example
+Gitlab pages url - https://jtorbett23.gitlab.io/gitlab-pages-react-example/
 
 ## Available Scripts
 
@@ -16,8 +21,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner to run all tests.\
 
 ### `npm run build`
 
@@ -27,44 +31,14 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deploying to Gitlab pages
 
-### `npm run eject`
+To deploy this project to Gitlab pages first fork this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then create a new Gitlab project and choose "Run CI/CD for external repository".
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once your first pipeline has finished running go to Settings > Pages to find the url the page is hosted.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you only see a whitescreen make sure to edit the "homepage" attribute in the `package.json` to match your url.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For example my url is "https://jtorbett23.gitlab.io/gitlab-pages-react-example/" so my homepage will need to be "gitlab-pages-react-example".
