@@ -5,6 +5,7 @@ This is a react app setup to be run easily with a Gitlab pipeline and be deploye
 It is to be used with this tutorial - https://dev.to/jtorbett23/react-gitlab-pages-42l6
 
 Gitlab repository - https://gitlab.com/jtorbett23/gitlab-pages-react-example/
+
 Gitlab pages url - https://jtorbett23.gitlab.io/gitlab-pages-react-example/
 
 ## Available Scripts
