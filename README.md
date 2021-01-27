@@ -22,7 +22,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner to run all tests.\
+Launches the test runner to run all tests.
 
 ### `npm run build`
 
@@ -40,6 +40,6 @@ Then create a new Gitlab project and choose "Run CI/CD for external repository".
 
 Once your first pipeline has finished running go to Settings > Pages to find the url the page is hosted.
 
-If you only see a whitescreen make sure to edit the "homepage" attribute in the `package.json` to match your url.
+If you only see a whitescreen make sure to edit the "homepage" attribute in the `package.json` to match your url. 
 
 For example my url is "https://jtorbett23.gitlab.io/gitlab-pages-react-example/", so my homepage will need to be "gitlab-pages-react-example".
