@@ -1,0 +1,37 @@
+trigger:
+  branches:
+    include:
+      - master  # Adjust this to the branch you want to trigger the build on
+
+pool: Self managed agent pool
+
+steps:
+# 1. Install Node.js
+- task: UseNode@2
+  inputs:
+    versionSpec: '18.12'  # Specify Node.js version, adjust as per project needs
+    checkLatest: true
+
+# 2. Install Dependencies
+- script: |
+    npm install
+  displayName: 'Install Dependencies'
+
+# 3. Run Tests (Optional: This step will run your tests, assuming you have them configured in package.json)
+- script: |
+    npm test 
+  displayName: 'Run Tests'
+
+# 4. Build the React Application
+- script: |
+    npm run build
+  displayName: 'Build the React Application'
+
+# 5. Publish Build Artifacts (Optional: To save the build output, e.g., for deployment or review)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'build'  # Default build directory for React is usually 'build'
+    artifactName: 'react-app-build'
+    publishLocation: 'Container'
+  displayName: 'Publish Build Artifacts'
+
