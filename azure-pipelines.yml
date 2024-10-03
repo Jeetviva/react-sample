@@ -7,7 +7,7 @@ pool: Self managed agent pool
 
 steps:
 # 1. Install Node.js
-- task: UseNode@2
+- task: NodeTool@0
   inputs:
     versionSpec: '18.12'  # Specify Node.js version, adjust as per project needs
     checkLatest: true
