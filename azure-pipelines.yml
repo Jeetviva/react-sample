@@ -5,7 +5,14 @@ trigger:
 
 pool: Self managed agent pool
 
+variables:
+  MY_ENV_VAR: $(env)
+  ENV_VAR: 'my_value'
+
+
+
 steps:
+
 # 1. Install Node.js
 - task: NodeTool@0
   inputs:
@@ -21,6 +28,10 @@ steps:
 - script: |
     npm test 
   displayName: 'Run Tests'
+
+- script: |
+    echo "Using connection string: $(ENV_VAR)" 
+  displayName: 'Variables declaration'
 
 # 4. Build the React Application
 - script: |
