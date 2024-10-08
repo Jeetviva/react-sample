@@ -24,6 +24,10 @@ steps:
     npm install
   displayName: 'Install Dependencies'
 
+- script: |
+    echo 'The variable defined for the env is: $MY_ENV_VAR'
+  displayName: 'Variables calling'
+
 # 3. Run Tests (Optional: This step will run your tests, assuming you have them configured in package.json)
 - script: |
     npm test 
