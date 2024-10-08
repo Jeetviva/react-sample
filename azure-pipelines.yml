@@ -6,10 +6,11 @@ trigger:
 pool: Self managed agent pool
 
 variables:
-  MY_ENV_VAR: $(env)
-  ENV_VAR: 'my_value'
-
-
+  - name: MY_ENV_VAR 
+    value: $(env)
+  - name: ENV_VAR
+    value: 'my_value'
+  - group: gitlab
 
 steps:
 
@@ -25,8 +26,12 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: |
-    echo 'The variable defined for the env is: $MY_ENV_VAR'
+    echo 'The variable defined for the env is: $(MY_ENV_VAR)'
   displayName: 'Variables calling'
+
+- script: |
+    echo 'The variable defined for the env is: $(tuto)'
+  displayName: 'Variables calling tuto'
 
 # 3. Run Tests (Optional: This step will run your tests, assuming you have them configured in package.json)
 - script: |
